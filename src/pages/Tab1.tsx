@@ -4,16 +4,18 @@ import {
   IonHeader,
   IonPage,
   IonTitle,
-  IonToolbar
+  IonToolbar,
+  IonButton,
+  IonImg,
+  IonText
 } from "@ionic/react";
-import ExploreContainer from "../components/ExploreContainer";
 import "./Tab1.css";
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color='secondary'>
           <IonTitle>Home</IonTitle>
         </IonToolbar>
       </IonHeader>
@@ -23,7 +25,21 @@ const Tab1: React.FC = () => {
             <IonTitle size='large'>Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name='Tab 1 page' />
+        <IonText>
+          <h1>Welcome to My Food App</h1>
+        </IonText>
+        <IonImg
+          className='home-page-img'
+          src={
+            "https://minimalistbaker.com/wp-content/uploads/2020/01/GUIDE-to-Quick-Pickled-Vegetables-Cucumbers-carrots-radish-SPICY-cauliflower-and-red-onion-recipe-minimalistbaker-pickled-plantbased-glutenfree-13.jpg"
+          }
+        ></IonImg>
+        <IonText>
+          <p>Enjoy a couple recipes from Minimalist Baker. </p>
+        </IonText>
+        <IonButton href={"https://minimalistbaker.com"}>
+          View more receipes from Minimalist Baker
+        </IonButton>
       </IonContent>
     </IonPage>
   );
